@@ -9,6 +9,32 @@ function reverseString(string) {
   return string.split('').reverse().join('');
 }
 
+class Calculator {
+  constructor (x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
+  add() {
+    return this.x + this.y;
+  }
 
-  module.exports = { stringLength, reverseString };
+  subtract() {
+    return this.x - this.y;
+  }
+
+  divide() {
+    return this.x / this.y;
+  }
+
+  multiply() {
+    return this.x * this.y;
+  }
+}
+
+function capitalize(string) {
+  const newString = string.charAt(0).toUpperCase() + string.slice(1);
+  return newString;
+}
+
+  module.exports = { stringLength, reverseString, Calculator, capitalize };
